@@ -1,22 +1,20 @@
 > [!NOTE]
-> BetrockServer development is being halted/slowed, as I've shifted my
+> LegacyMcServer development has been completely halted, as I've shifted my
 > focus towards [Betrock++](https://github.com/OfficialPixelBrush/BetrockPlusPlus).
 >
 > [Betrock++](https://github.com/OfficialPixelBrush/BetrockPlusPlus)
-> reuses a lot of the work that was done for BetrockServer,
+> reuses a lot of the work that was done for LegacyMcServer,
 > just reworked to be more performant, readable and modular.
 >
 > It intends to be a more complete and actually thought out package.
 > There're even plans to use the code to make a client too!
->
-> I may archive this repository at a later date,
-> but for the time being it'll remain editable,
-> as I'm cross-referencing and dual-updating both codebases for now.
+> 
+> Check out the [OpenBeta project page](https://officialpixelbrush.github.io/OpenBeta/) for info on other related projects.
 
-![BetrockServer Logo](media/betrock_server_logo.png)[![Discord](https://img.shields.io/badge/Join%20the-Discord-7289DA)](https://discord.gg/JHTz2HSKrf)
+[![Discord](https://img.shields.io/badge/Join%20the-Discord-7289DA)](https://discord.gg/JHTz2HSKrf)
 ![C#](https://img.shields.io/badge/Language-C%2B%2B23-5E96CF)
-![Issues](https://img.shields.io/github/issues/OfficialPixelBrush/BetrockServer)
-![Pull requests](https://img.shields.io/github/issues-pr/OfficialPixelBrush/BetrockServer)
+![Issues](https://img.shields.io/github/issues/OfficialPixelBrush/LegacyMcServer)
+![Pull requests](https://img.shields.io/github/issues-pr/OfficialPixelBrush/LegacyMcServer)
 
 A Minecraft Beta 1.7.3 Server written in C++23. The goal being to have a semi-modern Beta 1.7.3 server that people can muck about with however they like, and to not have to deal with plugins that're over a decade old.
 
@@ -40,19 +38,19 @@ https://discord.gg/JHTz2HSKrf)!
 | ![](media/screenshots/gameplay.png) | ![](media/screenshots/pack.png) | ![](media/screenshots/gargamel.png) |
 
 ## Getting Started
-How do you run your own BetrockServer instance?
+How do you run your own LegacyMcServer instance?
 
 If you're on Linux, simply follow the steps listed below. If you're on Windows, please follow these same steps only after installing [Windows Subsystem for Linux (WSL2)](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 ## Option 1 - Download
-Check the releases page for the latest binary of BetrockServer. Then simply run the executable.
+Check the releases page for the latest binary of LegacyMcServer. Then simply run the executable.
 
 If it complains about lacking a `scripts` folder, download the `src/scripts` folder from the repository and place it alongside the executable.
 
 Downloading can be unreliable, since certain libraries, such as `libdeflate`, may not necessarily be installed. Compiling is honestly the easier and more robust option.
 
 ## Option 2 - Compiling
-This section is written to be as accessible as possible, so anyone can compile BetrockServer.
+This section is written to be as accessible as possible, so anyone can compile LegacyMcServer.
 
 ### Install Dependencies
 **Debian/Ubuntu**
@@ -67,12 +65,12 @@ sudo pacman -Syu git cmake make gcc lua libdeflate
 ```bash
 sudo dnf install git cmake make gcc lua-devel libdeflate libasan
 ```
-This installs all the necessary libraries that BetrockServer needs.
+This installs all the necessary libraries that LegacyMcServer needs.
 
 ### Clone
 ```bash
-git clone --recurse-submodules https://github.com/OfficialPixelBrush/BetrockServer.git
-cd BetrockServer
+git clone --recurse-submodules https://github.com/OfficialPixelBrush/LegacyMcServer.git
+cd LegacyMcServer
 ```
 This downloads the repository onto your computer.
 ```bash
@@ -89,7 +87,7 @@ This turns the source code into an executable binary file.
 
 ### Running
 ```bash
-./BetrockServer
+./LegacyMcServer
 ```
 This runs the built executable and generates a new world,
 if one isn't already present.
@@ -100,8 +98,8 @@ cpack --config CPackConfig.cmake -G TGZ
 ```
 
 ## Issues
-If you encounter **any** issues, inaccuracies to the base game or simply want to provide an idea that may make BetrockServer better,
-please report them on the [Issues tab](https://github.com/OfficialPixelBrush/BetrockServer/issues).
+If you encounter **any** issues, inaccuracies to the base game or simply want to provide an idea that may make LegacyMcServer better,
+please report them on the [Issues tab](https://github.com/OfficialPixelBrush/LegacyMcServer/issues).
 
 Please check if the issue you've found has already been reported or even been solved already.
 
@@ -113,13 +111,13 @@ If not, create a **new issue** and fill out all the necessary information accord
 - [Beta Wiki](https://officialpixelbrush.github.io/beta-wiki)
 
 # Contributing
-Please read the [CONTRIBUTING](https://github.com/OfficialPixelBrush/BetrockServer/blob/main/CONTRIBUTING.md) page.
+Please read the [CONTRIBUTING](https://github.com/OfficialPixelBrush/LegacyMcServer/blob/main/CONTRIBUTING.md) page.
 
 # Resources
 For further reading, to aid development and sources for where certain info has been gotten from.
 
-Some stuff can be found on the [BetrockServer Wiki](https://github.com/OfficialPixelBrush/BetrockServer/wiki),
-especially if you're interested in developing your own [World Generator](https://github.com/OfficialPixelBrush/BetrockServer/wiki/World-Generation) or [Plugin](https://github.com/OfficialPixelBrush/BetrockServer/wiki/Plugins).
+Some stuff can be found on the [LegacyMcServer Wiki](https://github.com/OfficialPixelBrush/LegacyMcServer/wiki),
+especially if you're interested in developing your own [World Generator](https://github.com/OfficialPixelBrush/LegacyMcServer/wiki/World-Generation) or [Plugin](https://github.com/OfficialPixelBrush/LegacyMcServer/wiki/Plugins).
 
 If you're more interested in the in-depth technical stuff of Beta 1.7.3, check out [my extended fork of mudkipdev's Beta Wiki](https://officialpixelbrush.github.io/beta-wiki)!
 
@@ -135,18 +133,18 @@ If you're more interested in the in-depth technical stuff of Beta 1.7.3, check o
     - [Help:Isometric Renders](https://minecraft.wiki/w/Help:Isometric_renders) (Used for the Logo)
 
 # Stats
-![Contributors](https://img.shields.io/github/contributors/OfficialPixelBrush/BetrockServer)
+![Contributors](https://img.shields.io/github/contributors/OfficialPixelBrush/LegacyMcServer)
 
 | Issues | PRs |
 | - | - |
-| ![Open Issues](https://img.shields.io/github/issues/OfficialPixelBrush/BetrockServer) | ![Open PRs](https://img.shields.io/github/issues-pr/OfficialPixelBrush/BetrockServer) |
-| ![Closed Issues](https://img.shields.io/github/issues-closed/OfficialPixelBrush/BetrockServer) | ![Closed PRs](https://img.shields.io/github/issues-pr-closed/OfficialPixelBrush/BetrockServer) |
+| ![Open Issues](https://img.shields.io/github/issues/OfficialPixelBrush/LegacyMcServer) | ![Open PRs](https://img.shields.io/github/issues-pr/OfficialPixelBrush/LegacyMcServer) |
+| ![Closed Issues](https://img.shields.io/github/issues-closed/OfficialPixelBrush/LegacyMcServer) | ![Closed PRs](https://img.shields.io/github/issues-pr-closed/OfficialPixelBrush/LegacyMcServer) |
 
 | Branch | Commits |
 | - | - |
-| main | ![Commits (main)](https://img.shields.io/github/commit-activity/t/OfficialPixelBrush/BetrockServer/main) |
-| latest | ![Commits (latest)](https://img.shields.io/github/commit-activity/t/OfficialPixelBrush/BetrockServer/latest) |
+| main | ![Commits (main)](https://img.shields.io/github/commit-activity/t/OfficialPixelBrush/LegacyMcServer/main) |
+| latest | ![Commits (latest)](https://img.shields.io/github/commit-activity/t/OfficialPixelBrush/LegacyMcServer/latest) |
                         
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=OfficialPixelBrush/BetrockServer&type=Date)](https://www.star-history.com/#OfficialPixelBrush/BetrockServer&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=OfficialPixelBrush/LegacyMcServer&type=Date)](https://www.star-history.com/#OfficialPixelBrush/LegacyMcServer&Date)

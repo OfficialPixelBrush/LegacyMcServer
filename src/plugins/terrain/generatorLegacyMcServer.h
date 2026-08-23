@@ -5,10 +5,10 @@
  * @brief A custom world generator
  * 
  */
-class GeneratorBetrockServer : public Generator {
+class GeneratorLegacyMcServer : public Generator {
   public:
-	GeneratorBetrockServer(int64_t seed, World *world);
-	~GeneratorBetrockServer() = default;
+	GeneratorLegacyMcServer(int64_t seed, World *world);
+	~GeneratorLegacyMcServer() = default;
 	std::shared_ptr<Chunk> GenerateChunk(Int2 chunkPos) override;
 	bool PopulateChunk(Int2 chunkPos) override;
 };

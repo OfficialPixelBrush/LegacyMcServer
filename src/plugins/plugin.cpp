@@ -36,7 +36,7 @@ Plugin::Plugin(std::string path) {
 
 	if (apiVersion > PLUGIN_LATEST_VERSION) {
 		lua_close(L);
-		throw std::runtime_error("\"" + name + "\" was made for a newer version of BetrockServer!");
+		throw std::runtime_error("\"" + name + "\" was made for a newer version of LegacyMcServer!");
 	}
 
 	// Init Function

@@ -7,7 +7,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-project(BetrockServer VERSION 0.3.2)
+project(LegacyMcServer VERSION 0.3.2)
 
 # This could be funny to do in the future :p
 #set(CMAKE_C_FLAGS "-m32 -march=pentium -static")
@@ -68,7 +68,7 @@ include_directories(
 )
 
 add_executable(
-    BetrockServer
+    LegacyMcServer
 
     src/coms/coms.cpp
     src/coms/responses.cpp
@@ -114,7 +114,7 @@ add_executable(
     src/plugins/terrain/historic/noise/noiseGenerator.cpp
     src/plugins/terrain/historic/noise/noisePerlin.cpp
     src/plugins/terrain/historic/noise/noiseSimplex.cpp
-    src/plugins/terrain/generatorBetrockServer.cpp
+    src/plugins/terrain/generatorLegacyMcServer.cpp
     src/plugins/terrain/generatorLua.cpp
     src/plugins/terrain/generator.cpp
     src/plugins/pluginManager.cpp
@@ -132,10 +132,10 @@ add_executable(
 )
 
 # this is only defined to expose jthreads
-target_compile_definitions(BetrockServer PRIVATE -D_LIBCPP_ENABLE_EXPERIMENTAL=1)
+target_compile_definitions(LegacyMcServer PRIVATE -D_LIBCPP_ENABLE_EXPERIMENTAL=1)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_options(BetrockServer PRIVATE -ggdb)
+    target_compile_options(LegacyMcServer PRIVATE -ggdb)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -g")
     set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -fsanitize=address")
 endif()
@@ -143,7 +143,7 @@ endif()
 set(CMAKE_SYSTEM_NAME Linux)
 
 # If we're being extra pedantic
-target_compile_options(BetrockServer PRIVATE
+target_compile_options(LegacyMcServer PRIVATE
     # Make math more java-like
     #-fexcess-precision=standard
     #-fno-fast-math
@@ -167,7 +167,7 @@ target_compile_options(BetrockServer PRIVATE
 )
 
 target_link_libraries(
-    BetrockServer
+    LegacyMcServer
     deflate
     ${LUA_LIBRARIES}
     Threads::Threads
@@ -181,9 +181,9 @@ else()
 endif()
 
 # Set up CPack for AppImage
-set(CPACK_PACKAGE_NAME "BetrockServer")
+set(CPACK_PACKAGE_NAME "LegacyMcServer")
 set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "BetrockServer - Minecraft Beta 1.7.3 Server-Engine")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "LegacyMcServer - Minecraft Beta 1.7.3 Server-Engine")
 set(CPACK_PACKAGE_VENDOR "Torben J. Virtmann")
 set(CPACK_PACKAGE_CONTACT "letsplaytvirtmann@gmail.com")
 set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/README.md")
@@ -195,5 +195,5 @@ set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CM
 include(CPack)
 
 # Install the Betrock executable
-install(TARGETS BetrockServer DESTINATION bin)
+install(TARGETS LegacyMcServer DESTINATION bin)
 

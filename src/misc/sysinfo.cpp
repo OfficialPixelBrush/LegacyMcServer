@@ -26,7 +26,7 @@ int32_t GetUsedMemory() { // Note: this value is in KB!
 	return result;
 }
 
-// Get the number of Megabytes used by BetrockServer
+// Get the number of Megabytes used by LegacyMcServer
 double GetUsedMemoryMB(std::string text) {
 	FILE *file = fopen("/proc/self/status", "r");
 	int64_t result = -1;

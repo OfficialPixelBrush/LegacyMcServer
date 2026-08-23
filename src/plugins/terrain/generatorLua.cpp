@@ -57,7 +57,7 @@ GeneratorLua::GeneratorLua(int64_t pSeed, World *pWorld) : Generator(pSeed, pWor
 
 	if (apiVersion > GENERATOR_LATEST_VERSION) {
 		lua_close(L);
-		throw std::runtime_error("\"" + name + "\" was made for a newer version of BetrockServer!");
+		throw std::runtime_error("\"" + name + "\" was made for a newer version of LegacyMcServer!");
 	}
 }
 

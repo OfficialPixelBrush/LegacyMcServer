@@ -1,15 +1,15 @@
 #include "blocks.h"
 #include "datatypes.h"
 #include "javaMath.h"
-#include "generatorBetrockServer.h"
+#include "generatorLegacyMcServer.h"
 
 /**
- * @brief Construct a new BetrockServer Generator
+ * @brief Construct a new LegacyMcServer Generator
  * 
  * @param pSeed The seed of the generated world
  * @param pWorld The world that the generator belongs to
  */
-GeneratorBetrockServer::GeneratorBetrockServer(int64_t pSeed, World *pWorld) : Generator(pSeed, pWorld) {
+GeneratorLegacyMcServer::GeneratorLegacyMcServer(int64_t pSeed, World *pWorld) : Generator(pSeed, pWorld) {
 	logger = &Betrock::Logger::Instance();
 	this->seed = pSeed;
 	this->world = pWorld;
@@ -21,7 +21,7 @@ GeneratorBetrockServer::GeneratorBetrockServer(int64_t pSeed, World *pWorld) : G
  * @param chunkPos The x,z coordinate of the chunk
  * @return std::shared_ptr<Chunk> 
  */
-std::shared_ptr<Chunk> GeneratorBetrockServer::GenerateChunk(Int2 chunkPos) {
+std::shared_ptr<Chunk> GeneratorLegacyMcServer::GenerateChunk(Int2 chunkPos) {
 	std::shared_ptr<Chunk> c = std::make_shared<Chunk>(this->world, chunkPos);
 	c->state = ChunkState::Generating;
 
@@ -70,6 +70,6 @@ std::shared_ptr<Chunk> GeneratorBetrockServer::GenerateChunk(Int2 chunkPos) {
  * @param chunkPos The x,z coordinate of the chunk
  * @return True if population succeeded
  */
-bool GeneratorBetrockServer::PopulateChunk( [[maybe_unused]] Int2 chunkPos) {
+bool GeneratorLegacyMcServer::PopulateChunk( [[maybe_unused]] Int2 chunkPos) {
     return true;
 }

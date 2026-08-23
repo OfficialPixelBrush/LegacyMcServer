@@ -1,5 +1,5 @@
 # Contributing
-Simply fork the [`latest` branch](https://github.com/OfficialPixelBrush/BetrockServer/tree/latest) and commit whatever changes you want to make.
+Simply fork the [`latest` branch](https://github.com/OfficialPixelBrush/LegacyMcServer/tree/latest) and commit whatever changes you want to make.
 
 Please, rebase to the latest commit and squash all your changes into a single commit before making a PR. This just makes it easier to merge into the branch.
 

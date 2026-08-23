@@ -4,4 +4,4 @@ Currently this is very loose. We try to limit access to what's needed on both th
 
 ## Reporting a Vulnerability
 
-File an issue as per the [issues section of the README](https://github.com/OfficialPixelBrush/BetrockServer?tab=readme-ov-file#issues).
+File an issue as per the [issues section of the README](https://github.com/OfficialPixelBrush/LegacyMcServer?tab=readme-ov-file#issues).

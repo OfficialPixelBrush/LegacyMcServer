@@ -112,8 +112,8 @@ void WorldManager::WorkerThread() {
 		generator = std::make_unique<GeneratorBeta173>(seed, &this->world);
 	} else if (gen == "alpha112_01") {
 		generator = std::make_unique<GeneratorAlpha112_01>(seed, &this->world);
-	} else if (gen == "betrockserver") {
-		generator = std::make_unique<GeneratorBetrockServer>(seed, &this->world);
+	} else if (gen == "LegacyMcServer") {
+		generator = std::make_unique<GeneratorLegacyMcServer>(seed, &this->world);
 	} else {
 		generator = std::make_unique<GeneratorLua>(seed, &this->world);
 	}
