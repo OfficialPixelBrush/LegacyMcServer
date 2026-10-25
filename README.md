@@ -1,15 +1,15 @@
 > [!NOTE]
 > LegacyMcServer development has been completely halted, as I've shifted my
-> focus towards [Betrock++](https://github.com/OfficialPixelBrush/BetrockPlusPlus).
+> focus towards [Betrock++](https://github.com/OpenBetaGroup/BetrockPlusPlus).
 >
-> [Betrock++](https://github.com/OfficialPixelBrush/BetrockPlusPlus)
+> [Betrock++](https://github.com/OpenBetaGroup/BetrockPlusPlus)
 > reuses a lot of the work that was done for LegacyMcServer,
 > just reworked to be more performant, readable and modular.
 >
 > It intends to be a more complete and actually thought out package.
 > There're even plans to use the code to make a client too!
 > 
-> Check out the [OpenBeta project page](https://officialpixelbrush.github.io/OpenBeta/) for info on other related projects.
+> Check out the [OpenBeta project page](https://openbetagroup.github.io) for info on other related projects.
 
 [![Discord](https://img.shields.io/badge/Join%20the-Discord-7289DA)](https://discord.gg/JHTz2HSKrf)
 ![C#](https://img.shields.io/badge/Language-C%2B%2B23-5E96CF)
